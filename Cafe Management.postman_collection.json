@@ -1,0 +1,875 @@
+{
+	"info": {
+		"_postman_id": "9e781797-86a8-4a76-9330-3e0582b92ef8",
+		"name": "Cafe Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34904073"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"suraj 2002\",\r\n    \"contactNumber\" : \"1234567890\",\r\n    \"email\":\"shubhamkumarmaura786@@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/user/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"email@gmail.com\",\r\n    \"password\" : \"123456\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU1NDA5NzMsImV4cCI6MTczNTU3Njk3M30.3CzbxJNIEouazSdp4H6dWtwHqqbM7EBbvjnevzs1HoiMgPpAYB1gAqtSd10Bp8jP2JtYvyNQK6ssramg4gSfTQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/user/get",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidXNlciIsInN1YiI6InN1cmFqMjAwMmZha2VAZ21haWwuY29tIiwiaWF0IjoxNzM1NjA3MjcxLCJleHAiOjE3MzU2NDMyNzF9.j6KmI4GMBPIxYREe97W9hLTvn6vg8YaE9e5PQoQXvkk6D6UtFgap7MiYFHSWvhmyCL5eSVSwg-yA-4Dv650Syw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 3, \r\n    \"status\" :  \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/user/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU1NTMyNzAsImV4cCI6MTczNTU4OTI3MH0.wTVXXP1q75bRVQHnoX_kaXXXFibLvFlphv-wdwYSB9-iww67mAnE15PHGxd2Kx-tPZJr4j9GNNasICbTdBwd9w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\" : \"123456\", \r\n    \"newPassword\" :  \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/user/changePassword",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"suraj2002mail@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/user/forgotPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "add category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU2NjM1NzYsImV4cCI6MTczNTY5OTU3Nn0.cDTVK-fW5CkpvCSo8F3X5_-T-61VLOCcnTpCP9F4tY8JQjqLmXmch4ykXYw03IJo5CvOd8XFAKmwV2TlJv9wKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"drinks\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/category/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"category",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3NDI4MDU5NDUsImV4cCI6MTc0Mjg0MTk0NX0.ckvE4X1kVSmAxnD_hbK2noM2XQzYD_v4NCovC9XYvJ03WQoqSdbhadwvIbgEoq4xkIu_AWuSbkWeJnAbXRWnAA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/category/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"category",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU2NjM1NzYsImV4cCI6MTczNTY5OTU3Nn0.cDTVK-fW5CkpvCSo8F3X5_-T-61VLOCcnTpCP9F4tY8JQjqLmXmch4ykXYw03IJo5CvOd8XFAKmwV2TlJv9wKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"name\" : \"ice-cream\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/category/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"category",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU2NjM1NzYsImV4cCI6MTczNTY5OTU3Nn0.cDTVK-fW5CkpvCSo8F3X5_-T-61VLOCcnTpCP9F4tY8JQjqLmXmch4ykXYw03IJo5CvOd8XFAKmwV2TlJv9wKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/category/get",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"category",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category has product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU2NjM1NzYsImV4cCI6MTczNTY5OTU3Nn0.cDTVK-fW5CkpvCSo8F3X5_-T-61VLOCcnTpCP9F4tY8JQjqLmXmch4ykXYw03IJo5CvOd8XFAKmwV2TlJv9wKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/category/get?filterValue=true",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"category",
+								"get"
+							],
+							"query": [
+								{
+									"key": "filterValue",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "add product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU2NjM1NzYsImV4cCI6MTczNTY5OTU3Nn0.cDTVK-fW5CkpvCSo8F3X5_-T-61VLOCcnTpCP9F4tY8JQjqLmXmch4ykXYw03IJo5CvOd8XFAKmwV2TlJv9wKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"coconut\",\r\n    \"categoryId\" : 1,\r\n    \"description\" : \"coconut for summers\",\r\n    \"price\" : 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/product/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU2NjM1NzYsImV4cCI6MTczNTY5OTU3Nn0.cDTVK-fW5CkpvCSo8F3X5_-T-61VLOCcnTpCP9F4tY8JQjqLmXmch4ykXYw03IJo5CvOd8XFAKmwV2TlJv9wKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\" : \"apple\",\r\n    \"categoryId\" : 1,\r\n    \"description\" : \"bright red apple\",\r\n    \"price\" : 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/product/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU2NjM1NzYsImV4cCI6MTczNTY5OTU3Nn0.cDTVK-fW5CkpvCSo8F3X5_-T-61VLOCcnTpCP9F4tY8JQjqLmXmch4ykXYw03IJo5CvOd8XFAKmwV2TlJv9wKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/product/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU2NjM1NzYsImV4cCI6MTczNTY5OTU3Nn0.cDTVK-fW5CkpvCSo8F3X5_-T-61VLOCcnTpCP9F4tY8JQjqLmXmch4ykXYw03IJo5CvOd8XFAKmwV2TlJv9wKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 2,\r\n    \"status\" : \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/product/updateStatus",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"updateStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU2NjM1NzYsImV4cCI6MTczNTY5OTU3Nn0.cDTVK-fW5CkpvCSo8F3X5_-T-61VLOCcnTpCP9F4tY8JQjqLmXmch4ykXYw03IJo5CvOd8XFAKmwV2TlJv9wKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"coconut\",\r\n    \"categoryId\" : 1,\r\n    \"description\" : \"coconut for summers\",\r\n    \"price\" : 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/product/get",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU2NjM1NzYsImV4cCI6MTczNTY5OTU3Nn0.cDTVK-fW5CkpvCSo8F3X5_-T-61VLOCcnTpCP9F4tY8JQjqLmXmch4ykXYw03IJo5CvOd8XFAKmwV2TlJv9wKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"coconut\",\r\n    \"categoryId\" : 1,\r\n    \"description\" : \"coconut for summers\",\r\n    \"price\" : 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/product/getByCategory/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"getByCategory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU2NjM1NzYsImV4cCI6MTczNTY5OTU3Nn0.cDTVK-fW5CkpvCSo8F3X5_-T-61VLOCcnTpCP9F4tY8JQjqLmXmch4ykXYw03IJo5CvOd8XFAKmwV2TlJv9wKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"coconut\",\r\n    \"categoryId\" : 1,\r\n    \"description\" : \"coconut for summers\",\r\n    \"price\" : 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/product/getById/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"getById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bill",
+			"item": [
+				{
+					"name": "generate report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU3MTIzNjgsImV4cCI6MTczNTc0ODM2OH0.EOeRkHGf6HtYtfzsHHnSfn9CaRHCtRxfTgKtfarFUu6ccYhPHpyBVwmAmuCJcTa8mwgg1a5GSvtiLpo63ti9zw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Charlie Green\",\r\n  \"contactNumber\": \"+11456789012\",\r\n  \"email\": \"charlie.green@example.com\",\r\n  \"paymentMethod\": \"PayPal\",\r\n  \"totalAmount\": \"1600\",\r\n  \"productDetails\": \"[{\\\"name\\\": \\\"Cappuccino\\\", \\\"category\\\": \\\"Beverage\\\", \\\"quality\\\": \\\"Medium\\\", \\\"price\\\": 4, \\\"totalAmount\\\": 8}, {\\\"name\\\": \\\"Muffin\\\", \\\"category\\\": \\\"Food\\\", \\\"quality\\\": \\\"Small\\\", \\\"price\\\": 3, \\\"totalAmount\\\": 3}]\",\r\n  \"isGenerate\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/bill/generateReport",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bill",
+								"generateReport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all bills",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU3MTIzNjgsImV4cCI6MTczNTc0ODM2OH0.EOeRkHGf6HtYtfzsHHnSfn9CaRHCtRxfTgKtfarFUu6ccYhPHpyBVwmAmuCJcTa8mwgg1a5GSvtiLpo63ti9zw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/bill/getBills",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bill",
+								"getBills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get pdf",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU3MjYzMzIsImV4cCI6MTczNTc2MjMzMn0.upOpUXweJJfDSmnSoo-Zs5eS82Vc33W4XrZGKaiiwDCjBzEBTr1UtSES9Y4M2kIC3n637AngAfOW-iOgyG7acQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uuid\": \"BILL-1735713749049\",\r\n    \"name\": \"Alice Smith\",\r\n    \"email\": \"alice.smith@example.com\",\r\n    \"contactNumber\": \"+11234567890\",\r\n    \"paymentMethod\": \"Debit Card\",\r\n    \"totalAmount\": 2100,\r\n    \"productDetails\": \"[{\\\"name\\\": \\\"Latte\\\", \\\"price\\\": 5, \\\"quality\\\": \\\"Medium\\\", \\\"category\\\": \\\"Beverage\\\", \\\"totalAmount\\\": 10}, {\\\"name\\\": \\\"Croissant\\\", \\\"price\\\": 3, \\\"quality\\\": \\\"Small\\\", \\\"category\\\": \\\"Food\\\", \\\"totalAmount\\\": 3}]\",\r\n    \"createdBy\": \"email@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/bill/getPdf",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bill",
+								"getPdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU3MjYzMzIsImV4cCI6MTczNTc2MjMzMn0.upOpUXweJJfDSmnSoo-Zs5eS82Vc33W4XrZGKaiiwDCjBzEBTr1UtSES9Y4M2kIC3n637AngAfOW-iOgyG7acQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/bill/delete/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bill",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dashboard",
+			"item": [
+				{
+					"name": "get details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MzU3MjgwODEsImV4cCI6MTczNTc2NDA4MX0.AK_nsSVkBi_EE-UJswGIX8Zh_rtlvZGWQf5rXqEEJaPFkrPqTYqJrceoN3_Au3MDgKkIrdIMlOaubHLTwgLsVA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/dashboard/details",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"dashboard",
+								"details"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
